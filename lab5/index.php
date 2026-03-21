@@ -9,7 +9,6 @@ require_once 'TransactionTableRenderer.php';
 
 $repo = new TransactionRepository();
 
-// 🔥 создаём 10 транзакций
 for ($i = 1; $i <= 10; $i++) {
     $repo->addTransaction(
         new Transaction(
@@ -25,7 +24,6 @@ for ($i = 1; $i <= 10; $i++) {
 $manager = new TransactionManager($repo);
 $renderer = new TransactionTableRenderer();
 
-// пример использования
 $sorted = $manager->sortTransactionsByAmountDesc();
 
 echo $renderer->render($sorted);
