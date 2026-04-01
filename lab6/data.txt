@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Суп",
+        "ingredients": "Картофель, мясо",
+        "instructions": "варим мясо\r\nварим картофель",
+        "category": "обед",
+        "prep_time": "40",
+        "difficulty": "средне",
+        "created_at": "2026-03-31",
+        "author": "Луи"
+    },
+    {
+        "title": "Шашлык",
+        "ingredients": "баранина",
+        "instructions": "пожарить шашлык",
+        "category": "обед",
+        "prep_time": "45",
+        "difficulty": "средне",
+        "created_at": "2026-04-01",
+        "author": "Виктор Петрович"
+    },
+    {
+        "title": "Торт",
+        "ingredients": "Коржи, молоко, крем",
+        "instructions": "Замес теста\r\nНа большое блюдо выложите корж, на него нанесите толстый слой начинки и слегка прижмите\r\n",
+        "category": "десерт",
+        "prep_time": "59",
+        "difficulty": "сложно",
+        "created_at": "2026-03-22",
+        "author": "Сеня"
+    }
+]

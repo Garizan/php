@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить рецепт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+    
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+    
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+    
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+    
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 10px;
+            border: none;
+            background: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    
+        button:hover {
+            background: #45a049;
+        }
+        .link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .link a {
+            background: #2196F3;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .link a:hover {
+            background: #1976D2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+<h2>Добавить рецепт</h2>
+
+<form action="save.php" method="POST">
+
+    <label>Название:</label><br>
+    <input type="text" name="title" required minlength="3"><br><br>
+
+    <label>Ингредиенты:</label><br>
+    <textarea name="ingredients" required></textarea><br><br>
+
+    <label>Инструкция:</label><br>
+    <textarea name="instructions" required></textarea><br><br>
+
+    <label>Категория:</label><br>
+    <select name="category" required>
+        <option value="завтрак">Завтрак</option>
+        <option value="обед">Обед</option>
+        <option value="ужин">Ужин</option>
+        <option value="десерт">Десерт</option>
+    </select><br><br>
+
+    <label>Время приготовления (мин):</label><br>
+    <input type="number" name="prep_time" required min="1"><br><br>
+
+    <label>Сложность:</label><br>
+    <select name="difficulty" required>
+        <option value="легко">Легко</option>
+        <option value="средне">Средне</option>
+        <option value="сложно">Сложно</option>
+    </select><br><br>
+
+    <label>Дата создания:</label><br>
+    <input type="date" name="created_at" required><br><br>
+
+    <label>Автор:</label><br>
+    <input type="text" name="author" required><br><br>
+
+    <button type="submit">Сохранить</button>
+
+</form>
+    </div>
+    <div class="link">
+        <a href="list.php">Посмотреть все рецепты</a>
+    </div>
+
+</body>
+</html>
