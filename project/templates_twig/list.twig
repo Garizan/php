@@ -1,0 +1,39 @@
+{% extends "layout.twig" %}
+
+{% block title %}Рецепты — Twig{% endblock %}
+
+{% block content %}
+<div class="card">
+    <span class="badge">Twig templates</span>
+    <h2>Список рецептов</h2>
+
+    <div class="sort">
+        <a href="?sort=title">Сортировка: Название</a>
+        <a href="?sort=category">Сортировка: Категория</a>
+        <a href="?sort=created_at">Сортировка: Дата</a>
+    </div>
+
+    <table>
+        <tr>
+            <th>Название</th>
+            <th>Категория</th>
+            <th>Время</th>
+        </tr>
+        {% if data is not empty %}
+            {% for recipe in data %}
+                <tr>
+                    <td>{{ recipe.title }}</td>
+                    <td>{{ recipe.category }}</td>
+                    <td>{{ recipe.prep_time|default(0)|format_time }}</td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr><td colspan="3">Пока нет рецептов</td></tr>
+        {% endif %}
+    </table>
+
+    <div class="actions">
+        <a class="btn" href="/index.php">Открыть PHP-версию</a>
+    </div>
+</div>
+{% endblock %}
