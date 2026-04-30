@@ -9,8 +9,8 @@
                 <input type="text" name="title" required>
             </div>
             <div class="field">
-                <label>Категория</label>
-                <input type="text" name="category" placeholder="Суп, Десерт, Салат...">
+                <label>Категория (ID)</label>
+                <input type="number" name="category_id" placeholder="1, 2, 3...">
             </div>
         </div>
 
